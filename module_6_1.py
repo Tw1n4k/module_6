@@ -23,11 +23,11 @@ class Animal:
     def eat(self, food):
 
         if food.edible:
-            alive = False
-            print(f'{self.name} не стал есть {food.name}')
-        else:
-            fed = True
+            self.fed = True
             print(f'{self.name} съел {food.name}')
+        else:
+            self.alive = False
+            print(f'{self.name} не стал есть {food.name}')
 
 
 class Predator(Animal):
